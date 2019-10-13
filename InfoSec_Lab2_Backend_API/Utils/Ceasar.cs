@@ -7,12 +7,16 @@ namespace TZI.Utils
 {
     public class Caesar
     {
-        const string alfabet = " .,;-'ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private readonly string alfabet;
 
-        public string Encrypt(string plainMessage)
+        public Caesar(string alphabet)
+        {
+            this.alfabet = alphabet;
+        }
+
+        public string Encrypt(string plainMessage, int key)
         {
             char theMost = GetLetter(plainMessage);
-            int key = alfabet.IndexOf(theMost);
             return CodeEncode(plainMessage, key);
         }
 
