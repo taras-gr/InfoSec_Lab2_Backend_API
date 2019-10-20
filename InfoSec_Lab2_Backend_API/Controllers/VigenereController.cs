@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using InfoSec_Lab2_Backend_API.Models;
+﻿using InfoSec_Lab2_Backend_API.Models;
 using InfoSec_Lab2_Backend_API.Utils;
 using Microsoft.AspNetCore.Mvc;
-using TZI.Models;
-using TZI.Utils;
 
 namespace InfoSec_Lab2_Backend_API.Controllers
 {

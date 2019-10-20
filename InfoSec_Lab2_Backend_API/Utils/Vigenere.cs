@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace InfoSec_Lab2_Backend_API.Utils
+﻿namespace InfoSec_Lab2_Backend_API.Utils
 {
     public class VigenereCipher
     {
@@ -13,8 +8,6 @@ namespace InfoSec_Lab2_Backend_API.Utils
         {
             letters = alphabet;
         }
-
-        //генерування повторюваного пароля
         private string GetRepeatKey(string s, int n)
         {
             var p = s;
@@ -38,7 +31,6 @@ namespace InfoSec_Lab2_Backend_API.Utils
                 var codeIndex = letters.IndexOf(gamma[i]);
                 if (letterIndex < 0)
                 {
-                    //якщо літера не знайдена, додаємо її в незмінному вигляді
                     retValue += text[i].ToString();
                 }
                 else
@@ -50,11 +42,9 @@ namespace InfoSec_Lab2_Backend_API.Utils
             return retValue;
         }
 
-        //шифрування тексту
         public string Encrypt(string plainMessage, string password)
             => Vigenere(plainMessage, password);
 
-        //дешифрування тексту
         public string Decrypt(string encryptedMessage, string password)
             => Vigenere(encryptedMessage, password, false);
     }

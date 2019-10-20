@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace InfoSec_Lab2_Backend_API.Models
+﻿namespace InfoSec_Lab2_Backend_API.Models
 {
     public class VigenereModel
     {
