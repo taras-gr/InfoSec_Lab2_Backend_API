@@ -18,7 +18,7 @@ namespace InfoSec_Lab2_Backend_API.Utils
 
         public string Encrypt(string text, string key)
         {
-            var substitutionAlhabet = key.ToCharArray();
+            var substitutionAlphabet = key.ToCharArray();
             char[] message = text.ToCharArray();
 
             string encryptedMessage = "";
@@ -26,10 +26,26 @@ namespace InfoSec_Lab2_Backend_API.Utils
 
             for (int i = 0; i < message.Length; i++)
             {
-                encryptedMessage += substitutionAlhabet[_alphabet.IndexOf(message[i])].ToString();
+                encryptedMessage += substitutionAlphabet[_alphabet.IndexOf(message[i])].ToString();
             }
 
             return encryptedMessage;
+        }
+
+        public string Decrypt(string text, string key)
+        {
+            var substitutionAlphabet = key.ToCharArray();
+            char[] message = text.ToCharArray();
+
+            string decryptedMessage = "";
+
+
+            for (int i = 0; i < message.Length; i++)
+            {
+                decryptedMessage += _alphabet[substitutionAlphabet.IndexOf(message[i])].ToString();
+            }
+
+            return decryptedMessage;
         }
     }
 }

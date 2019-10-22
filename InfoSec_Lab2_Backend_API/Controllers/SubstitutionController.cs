@@ -17,7 +17,7 @@ namespace InfoSec_Lab2_Backend_API.Controllers
             var alphabet = message.Alphabet;
             var password = message.Password;
 
-            VigenereCipher cipher = new VigenereCipher(alphabet);
+            Substitution cipher = new Substitution(alphabet);
 
             message.Message = cipher.Decrypt(encryptedText, password);
 
