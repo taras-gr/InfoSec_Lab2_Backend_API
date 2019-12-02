@@ -6,9 +6,9 @@ namespace InfoSec_Lab2_Backend_API.Controllers
 {
     [Route("api/[Controller]")]
     [ApiController]
-    public class HillController : Controller
+    public class FeistelController : Controller
     {
-        // POST api/hill/decrypt
+        // POST api/feistel/decrypt
         [HttpPost]
         [Route("decrypt")]
         public IActionResult DecryptMessage([FromBody]VigenereModel message)
@@ -25,7 +25,7 @@ namespace InfoSec_Lab2_Backend_API.Controllers
             return Json(mess);
         }
 
-        // POST api/hill/encrypt
+        // POST api/feistel/encrypt
         [HttpPost]
         [Route("encrypt")]
         public IActionResult EncryptMessage([FromBody]VigenereModel message)
@@ -38,7 +38,7 @@ namespace InfoSec_Lab2_Backend_API.Controllers
 
             //message.Message = cipher.Encrypt(plainText, password);
             var mess = new VigenereModel();
-            mess.Message = Message.HillEncryptedMessage;
+            mess.Message = Message.FeistelEncryptedMessage;
             return Json(mess);
         }
     }
